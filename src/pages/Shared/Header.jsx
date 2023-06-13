@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/images/logo/df-logo.png";
 import { FiAlignRight, FiX } from "react-icons/fi";
 import useTheme from "../../hooks/useTheme";
@@ -88,7 +88,7 @@ const Header = () => {
   return (
     <div className="shadow-xl py-4 px-7 sticky top-0 bg-white dark:bg-slate-800 z-10">
       <div className="flex justify-between items-center">
-        <img className="sm:w-[200px] w-[100px]" src={logo} alt="" />
+        <Link to='/'><img className="sm:w-[200px] w-[100px]" src={logo} alt="" /></Link>
 
         <div className="flex items-center gap-5">
           <div className="hidden md:block">
@@ -115,7 +115,7 @@ const Header = () => {
             />
           )}
           <button
-            className="text-[#B799FF] md:hidden"
+            className="text-[#B799FF] md:hidden z-50"
             onClick={() => setMenu(!menu)}
           >
             {menu ? (

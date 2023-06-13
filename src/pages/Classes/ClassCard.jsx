@@ -27,8 +27,29 @@ const ClassCard = ({data}) => {
 
 
         privatePost('/cart',body).then(res=>{
+            console.log(res)
             if(res.acknowledged===true){
+
+                Swal.fire({
+              
+                    icon: 'success',
+                    title: 'Class selected',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+
                 refetch()
+            }
+
+            if(res.error===true && res.message==='Already in cart'){
+                Swal.fire({
+              
+                    icon: 'error',
+                    title: 'You already selected or enrolled to this class',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+
             }
             
         })

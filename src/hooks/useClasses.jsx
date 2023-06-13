@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { privateGet } from '../utilities/apiCaller';
+import { privateGet, publicGet } from '../utilities/apiCaller';
 import { useContext } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 
@@ -9,7 +9,7 @@ const useClasses = (url) => {
    
         const {data=[],refetch}=useQuery(['classes'],()=>{
 
-            return privateGet(url).then(res=>res);
+            return publicGet(url).then(res=>res);
         
           });
     

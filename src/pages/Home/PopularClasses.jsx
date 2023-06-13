@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { publicGet } from '../../utilities/apiCaller';
-import { motion } from "framer-motion"
+
 
 const PopularClasses = () => {
 
@@ -22,6 +22,9 @@ const PopularClasses = () => {
             
             
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4">
+
+
+              
       <div className="bg-red-500 h-64 rounded-lg relative"><img className=' h-full w-full rounded-lg opacity-90' src={data[0]?.image} alt="" /> <h1 className="absolute bottom-0 left-0 text-white text-xl p-6 drop-shadow-lg">{data[0]?.className}</h1></div>
 
 

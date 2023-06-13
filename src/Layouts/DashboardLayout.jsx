@@ -6,7 +6,7 @@ import light from "../assets/images/icon/sun.png";
 import dark from "../assets/images/icon/night.png";
 import useTheme from "../hooks/useTheme";
 import { AuthContext } from "../providers/AuthProvider";
-import { NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import LoadingSpinner from "../pages/Shared/LoadingSpinner";
 
 
@@ -102,7 +102,7 @@ const DashboardLayout = () => {
         <div className="w-full ">
           <div className="sticky top-0 z-20">
           <div className="flex justify-between dark:bg-slate-800 bg-white py-4 px-7  shadow-lg">
-           < img className="sm:w-[200px] w-[100px]" src={logo} alt="" />
+          <Link to='/'> < img className="sm:w-[200px] w-[100px]" src={logo} alt="" /></Link>
             <div className="flex items-center gap-4">
               <button onClick={() => setTheme(!theme)}>
                 {theme ? (

@@ -23,7 +23,7 @@ const SignIn = () => {
   const handleGooglesignin=()=>{
     googleSignin()
     .then(result=>{
-      console.log(result)
+      //console.log(result)
       const uData={
         name:result.user.displayName,
         image: result.user.photoURL,
